@@ -1,0 +1,514 @@
+data(
+{
+	"status":
+	{
+		"code":200
+		,"message":"Success."
+	}
+	,"results":
+	[
+		{
+			"Topic":"Microeconomics I",
+    		"Category":"Formal Education",
+    		"Level":"Beginner",
+    		"Field":"Economics",
+    		"Start_Date":"1-Mar-01",
+    		"Time":22,
+    		"Age":175
+		},
+  	    {
+    		"Topic":"Chemistry I",
+    		"Category":"Formal Education",
+    		"Level":"Beginner",
+    		"Field":"Chemistry",
+    		"Start_Date":"1-Mar-01",
+    		"Time":22,
+    		"Age":175
+  	  	},
+  	  	{
+    		"Topic":"Quantitative Methods for Business and Economics I",
+    		"Category":"Formal Education",
+    		"Level":"Beginner",
+    		"Field":"Data Science/Statistics",
+    		"Start_Date":"1-Mar-01",
+    		"Time":22,
+    		"Age":175
+  	  	},
+  {
+    "Topic":"Introduction to Programming and Algorithms",
+    "Category":"Formal Education",
+    "Level":"Beginner",
+    "Field":"Computer Science/Web Development",
+    "Start_Date":"1-Mar-01",
+    "Time":22,
+    "Age":175
+  },
+  {
+    "Topic":"Macroeconomics I",
+    "Category":"Formal Education",
+    "Level":"Beginner",
+    "Field":"Economics",
+    "Start_Date":"1-Aug-01",
+    "Time":22,
+    "Age":170
+  },
+  {
+    "Topic":"Chemistry II",
+    "Category":"Formal Education",
+    "Level":"Beginner",
+    "Field":"Chemistry",
+    "Start_Date":"1-Aug-01",
+    "Time":22,
+    "Age":170
+  },
+  {
+    "Topic":"Quantitative Methods for Business and Economics II",
+    "Category":"Formal Education",
+    "Level":"Beginner",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Aug-01",
+    "Time":22,
+    "Age":170
+  },
+  {
+    "Topic":"Foundations of Software Engineering",
+    "Category":"Formal Education",
+    "Level":"Beginner",
+    "Field":"Computer Science/Web Development",
+    "Start_Date":"1-Aug-01",
+    "Time":22,
+    "Age":170
+  },
+  {
+    "Topic":"Microeconomics II",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Economics",
+    "Start_Date":"1-Mar-02",
+    "Time":22,
+    "Age":163
+  },
+  {
+    "Topic":"Principles of Organic Chemistry",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Chemistry",
+    "Start_Date":"1-Mar-02",
+    "Time":22,
+    "Age":163
+  },
+  {
+    "Topic":"Econometric Methods",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Mar-02",
+    "Time":22,
+    "Age":163
+  },
+  {
+    "Topic":"Spectroscopy in Chemistry",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Chemistry",
+    "Start_Date":"1-Mar-02",
+    "Time":22,
+    "Age":163
+  },
+  {
+    "Topic":"Macroeconomics II",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Economics",
+    "Start_Date":"1-Aug-02",
+    "Time":22,
+    "Age":158
+  },
+  {
+    "Topic":"Australian Economy",
+    "Category":"Formal Education",
+    "Level":"Beginner",
+    "Field":"Economics",
+    "Start_Date":"1-Aug-02",
+    "Time":22,
+    "Age":158
+  },
+  {
+    "Topic":"Inorganic and Materials Chemistry",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Chemistry",
+    "Start_Date":"1-Aug-02",
+    "Time":22,
+    "Age":158
+  },
+  {
+    "Topic":"Principles of Physical Chemistry",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Chemistry",
+    "Start_Date":"1-Aug-02",
+    "Time":22,
+    "Age":158
+  },
+  {
+    "Topic":"Microeconomics III",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Economics",
+    "Start_Date":"1-Mar-03",
+    "Time":22,
+    "Age":151
+  },
+  {
+    "Topic":"Concepts in Medicinal Chemistry",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Chemistry",
+    "Start_Date":"1-Mar-03",
+    "Time":22,
+    "Age":151
+  },
+  {
+    "Topic":"Transition Metal Chemistry",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Chemistry",
+    "Start_Date":"1-Mar-03",
+    "Time":22,
+    "Age":151
+  },
+  {
+    "Topic":"International Economics",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Economics",
+    "Start_Date":"1-Mar-03",
+    "Time":22,
+    "Age":151
+  },
+  {
+    "Topic":"Macroeconomics III",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Economics",
+    "Start_Date":"1-Aug-03",
+    "Time":22,
+    "Age":146
+  },
+  {
+    "Topic":"Analytical Aspects of Organic Chemistry",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Chemistry",
+    "Start_Date":"1-Aug-03",
+    "Time":22,
+    "Age":146
+  },
+  {
+    "Topic":"Bioorganic and Natural Product Chemistry",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Chemistry",
+    "Start_Date":"1-Aug-03",
+    "Time":22,
+    "Age":146
+  },
+  {
+    "Topic":"Law and Economics",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Economics",
+    "Start_Date":"1-Aug-03",
+    "Time":22,
+    "Age":146
+  },
+  {
+    "Topic":"Physical Aspects of Inorganic Chemistry",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Chemistry",
+    "Start_Date":"1-Mar-04",
+    "Time":22,
+    "Age":139
+  },
+  {
+    "Topic":"Money and Banking",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Finance",
+    "Start_Date":"1-Mar-04",
+    "Time":22,
+    "Age":139
+  },
+  {
+    "Topic":"Corporate Finance",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Finance",
+    "Start_Date":"1-Mar-04",
+    "Time":22,
+    "Age":139
+  },
+  {
+    "Topic":"Mineralogy, Geochemistry and Petrology",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Chemistry",
+    "Start_Date":"1-Mar-04",
+    "Time":22,
+    "Age":139
+  },
+  {
+    "Topic":"Selected Topics in Inorganic Chemistry",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Chemistry",
+    "Start_Date":"1-Aug-04",
+    "Time":22,
+    "Age":134
+  },
+  {
+    "Topic":"Japanese Economy and Economic Policy",
+    "Category":"Formal Education",
+    "Level":"Intermediate",
+    "Field":"Economics",
+    "Start_Date":"1-Aug-04",
+    "Time":22,
+    "Age":134
+  },
+  {
+    "Topic":"International Financial Management",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Finance",
+    "Start_Date":"1-Aug-04",
+    "Time":22,
+    "Age":134
+  },
+  {
+    "Topic":"Petrology and Geochemistry",
+    "Category":"Formal Education",
+    "Level":"Advanced",
+    "Field":"Chemistry",
+    "Start_Date":"1-Aug-04",
+    "Time":22,
+    "Age":134
+  },
+  {
+    "Topic":"MS Excel",
+    "Category":"On-the-Job",
+    "Level":"Advanced",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"16-Dec-04",
+    "Time":500,
+    "Age":129
+  },
+  {
+    "Topic":"Teradata SQL",
+    "Category":"On-the-Job",
+    "Level":"Advanced",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Jan-06",
+    "Time":300,
+    "Age":117
+  },
+  {
+    "Topic":"Graduate Microeconomics",
+    "Category":"Formal Education",
+    "Level":"Graduate",
+    "Field":"Economics",
+    "Start_Date":"1-Mar-11",
+    "Time":22,
+    "Age":55
+  },
+  {
+    "Topic":"Graduate Macroeconomics",
+    "Category":"Formal Education",
+    "Level":"Graduate",
+    "Field":"Economics",
+    "Start_Date":"1-Aug-11",
+    "Time":22,
+    "Age":50
+  },
+  {
+    "Topic":"Algorithms for Data Mining",
+    "Category":"Formal Education",
+    "Level":"Graduate",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Mar-12",
+    "Time":22,
+    "Age":43
+  },
+  {
+    "Topic":"R",
+    "Category":"Self Taught",
+    "Level":"Advanced",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Mar-12",
+    "Time":150,
+    "Age":43
+  },
+  {
+    "Topic":"Project Management",
+    "Category":"On-the-Job",
+    "Level":"Intermediate",
+    "Field":"Project Management",
+    "Start_Date":"1-Mar-13",
+    "Time":100,
+    "Age":31
+  },
+  {
+    "Topic":"SQL Server",
+    "Category":"On-the-Job",
+    "Level":"Advanced",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Mar-13",
+    "Time":100,
+    "Age":31
+  },
+  {
+    "Topic":"QlikView",
+    "Category":"On-the-Job",
+    "Level":"Beginner",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Aug-13",
+    "Time":10,
+    "Age":26
+  },
+  {
+    "Topic":"Agile Development",
+    "Category":"On-the-Job",
+    "Level":"Intermediate",
+    "Field":"Project Management",
+    "Start_Date":"1-Sep-13",
+    "Time":30,
+    "Age":25
+  },
+  {
+    "Topic":"Team Foundation Server",
+    "Category":"On-the-Job",
+    "Level":"Intermediate",
+    "Field":"Project Management",
+    "Start_Date":"1-Sep-13",
+    "Time":30,
+    "Age":25
+  },
+  {
+    "Topic":"Tableau",
+    "Category":"On-the-Job",
+    "Level":"Beginner",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Feb-14",
+    "Time":15,
+    "Age":20
+  },
+  {
+    "Topic":"MS Access",
+    "Category":"On-the-Job",
+    "Level":"Intermediate",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Jun-14",
+    "Time":30,
+    "Age":16
+  },
+  {
+    "Topic":"Perl",
+    "Category":"Self Taught",
+    "Level":"Beginner",
+    "Field":"Computer Science/Web Development",
+    "Start_Date":"1-Feb-15",
+    "Time":12,
+    "Age":8
+  },
+  {
+    "Topic":"HTML",
+    "Category":"Self Taught",
+    "Level":"Beginner",
+    "Field":"Computer Science/Web Development",
+    "Start_Date":"1-Mar-15",
+    "Time":8,
+    "Age":7
+  },
+  {
+    "Topic":"Blogging",
+    "Category":"Self Taught",
+    "Level":"Intermediate",
+    "Field":"Computer Science/Web Development",
+    "Start_Date":"1-Mar-15",
+    "Time":20,
+    "Age":7
+  },
+  {
+    "Topic":"CSS",
+    "Category":"Self Taught",
+    "Level":"Beginner",
+    "Field":"Computer Science/Web Development",
+    "Start_Date":"1-Mar-15",
+    "Time":8,
+    "Age":7
+  },
+  {
+    "Topic":"Python",
+    "Category":"On-the-Job",
+    "Level":"Beginner",
+    "Field":"Computer Science/Web Development",
+    "Start_Date":"1-Apr-15",
+    "Time":22,
+    "Age":6
+  },
+  {
+    "Topic":"MongoDB",
+    "Category":"On-the-Job",
+    "Level":"Beginner",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"1-Apr-15",
+    "Time":10,
+    "Age":6
+  },
+  {
+    "Topic":"Trello",
+    "Category":"On-the-Job",
+    "Level":"Intermediate",
+    "Field":"Project Management",
+    "Start_Date":"1-May-15",
+    "Time":10,
+    "Age":5
+  },
+  {
+    "Topic":"Wordpress",
+    "Category":"Self Taught",
+    "Level":"Intermediate",
+    "Field":"Computer Science/Web Development",
+    "Start_Date":"1-May-15",
+    "Time":15,
+    "Age":5
+  },
+  {
+    "Topic":"Initiating and Planning Projects",
+    "Category":"Online Course",
+    "Level":"Intermediate",
+    "Field":"Project Management",
+    "Start_Date":"1-Jun-15",
+    "Time":6,
+    "Age":4
+  },
+  {
+    "Topic":"Regression Models",
+    "Category":"Online Course",
+    "Level":"Intermediate",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"3-Aug-15",
+    "Time":4,
+    "Age":2
+  },
+  {
+    "Topic":"Practical Machine Learning",
+    "Category":"Online Course",
+    "Level":"Intermediate",
+    "Field":"Data Science/Statistics",
+    "Start_Date":"7-Sep-15",
+    "Time":4,
+    "Age":0
+  }
+});
