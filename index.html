@@ -165,7 +165,7 @@
 	var v_border = 0.8;
 	var radius = 70;
 	var padding = 2;
-
+	
 	function start() {
 		$.ajax({
 			'url': "data.json",
@@ -176,52 +176,55 @@
 			}
 		});
 	};
-
 			
 	function create(new_data, new_size, new_group) {
 		$('#chart').empty();
 		if (new_data === undefined) {new_data = data;}
 		if (new_size === undefined) {new_size = def_size;}
 		if (new_group === undefined) {new_group = def_group;}
+		
 		var width = Math.max(document.documentElement.clientWidth*h_border, window.innerWidth*h_border || 0);
 		var height = Math.max(document.documentElement.clientHeight*v_border, window.innerHeight*v_border || 0);
+		var centers = getCenters(new_data, new_group, [width, height]);
+		
 		var svg = d3.select("#chart").append("svg")
 		.attr("width", width)
 		.attr("height", height);
 
-		data = getDataMapping(new_data, new_size, width, height);
+		var max = d3.max(_.pluck(new_data, new_size));
+          
+		for (var j = 0; j < new_data.length; j++) {
+			new_data[j].radius = (new_size != '') ? radius * (new_data[j][new_size] / max) : 15;
+			new_data[j].x = new_data[j].x ? new_data[j].x : Math.random() * width;
+			new_data[j].y = new_data[j].y ? new_data[j].y : Math.random() * height;
+		}
 		
 		var nodes = svg.selectAll("circle")
-		.data(new_data);
+			.data(new_data);
+		
+		svg.selectAll(".label")
+			.data(centers).enter().append("text")
+			.attr("class", "label")
+			.text(function (d) { return d.name })
+			.attr("transform", function (d) {
+				return "translate(" + (d.x + (d.dx / 2) - 100) + ", " + (d.y + 20) + ")";
+			});
+		
+		var force = d3.layout.force()
+			.on("tick", tick(centers, new_group, new_data, nodes));
 
 		nodes.enter().append("circle")
 		.attr("class", "node")
 		.attr("cx", function (d) { return d.x; })
 		.attr("cy", function (d) { return d.x; })
 		.attr("r", function (d) { return d.radius; })
-		.style("fill", function (d, i) { return colors['default']; })
+		.style("fill", allocateColor(def_color))
 		.on("mouseover", function (d) { showPopover.call(this, d); })
-		.on("mouseout", function (d) { removePopovers(); });
+		.on("mouseout", function (d) { removePopovers(); })
+		;
 		
-		var force = d3.layout.force();
-		allocateColor(def_color);
-		
-		var centers = getCenters(new_data, new_group, [width, height]);
-		force.on("tick", tick(centers, new_group, new_data, nodes));
-		labels(centers, svg)
 		force.start();
-		
-	};
-
-	function getDataMapping(data, vname, width, height) {
-		var max = d3.max(_.pluck(data, vname));
-          
-		for (var j = 0; j < data.length; j++) {
-			data[j].radius = (vname != '') ? radius * (data[j][vname] / max) : 15;
-			data[j].x = data[j].x ? data[j].x : Math.random() * width;
-			data[j].y = data[j].y ? data[j].y : Math.random() * height;
-		}
-		return data;
+		data = new_data // Save current data for next time
 	};
 	
 	function changeSize(data, size, width, height) {
@@ -233,7 +236,6 @@
 		.attr('r', function(d, i) { return val ? (radius * (data[i][val] / max)) : 15 })
 		.attr('cx', function(d) { return d.x })
 		.attr('cy', function(d) { return d.y })
-		.duration(1000);
 
 		force.start();
 	};
@@ -243,13 +245,6 @@
 		.transition()
 		.style('fill', function(d) { return val ? colors[val][d[val]] : colors['default'] })
 		.duration(1000);
-
-		$('.colors').empty();
-		if(val) {
-			for(var label in colors[val]) {
-				$('.colors').append('<div class="col-xs-1 color-legend" style="background:'+colors[val][label]+';">'+label+'</div>')
-			}
-		}
 	};
 
 	function getCenters(data, vname, size) {
@@ -260,7 +255,6 @@
           
 		map = d3.layout.treemap().size(size).ratio(1/1);
 		map.nodes({children: centers});
-
 		return centers;
 	};	
 
@@ -281,17 +275,6 @@
 			.attr("cy", function (d) { return d.y; });
 		}
 	};
-
-	function labels (centers, svg) {
-		svg.selectAll(".label").remove();
-		svg.selectAll(".label")
-		.data(centers).enter().append("text")
-		.attr("class", "label")
-		.text(function (d) { return d.name })
-		.attr("transform", function (d) {
-			return "translate(" + (d.x + (d.dx / 2) - 100) + ", " + (d.y + 20) + ")";
-		});
-	}
 
 	function removePopovers () {
 		$('.popover').each(function() {
